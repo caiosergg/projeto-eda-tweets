@@ -1,64 +1,68 @@
-Tweets Dataset (Java)
-Projeto desenvolvido como parte da disciplina Laboratório de Estrutura de Dados (LEDA). O projeto segue todas as regras estabelecidas para a implementação de algoritmos de ordenação, sem o uso de estruturas complexas.
+# 🐦 Tweets Dataset (Java)
 
-🔧 Requisitos
-Java 17 (ou versão superior) instalado.
+Projeto desenvolvido como parte da disciplina **Laboratório de Estrutura de Dados (LEDA)**. O objetivo é aplicar algoritmos de ordenação em um conjunto de dados de tweets, **sem o uso de estruturas complexas**.
 
-Arquivos CSV necessários para a execução do projeto:
+---
 
-tweets.csv (link para download)
+## 📦 Requisitos
 
-tweets_formated_data.csv (gerado após a execução da transformação em "tweets.csv")
+- **Java 17** (ou superior) instalado.
+- **Arquivos CSV necessários:**
+  - [`tweets.csv`](#) *(link para download)*
+  - `tweets_formated_data.csv` *(gerado automaticamente a partir do `tweets.csv`)*
+  - `tweets_mentioned_persons.csv` *(gerado automaticamente a partir do `tweets_formated_data.csv`)*
 
-tweets_mentioned_persons.csv (gerado após a transformação "mentioned_person" com base no arquivo "tweets_formated_data.csv")
+> ⚠️ **Importante:** Os arquivos `.csv` não estão incluídos no repositório devido ao tamanho. Baixe-os pelos links indicados ou solicite ao professor.  
+> - `tweets_formated_data.csv` é gerado ao executar `TweetsDateFormatter.java`  
+> - `tweets_mentioned_persons.csv` é gerado ao executar `TweetsMentionExtractor.java`
 
-Aviso: Os arquivos CSV não estão incluídos diretamente no repositório, devido ao tamanho. Você pode baixá-los através dos links acima ou obtê-los com o seu professor. O arquivo tweets_formated_data.csv é gerado pela execução do arquivo TweetsDateFormatter.java e o tweets_mentioned_persons.csv é gerado com TweetsMentionExtractor.java.
+---
 
-🚀 Como executar
-1. Gere o arquivo com datas formatadas (DD/MM/AAAA):
-Compile e execute a classe TweetsDateFormatter.java para gerar o arquivo tweets_formated_data.csv:
+## 🚀 Como Executar
 
-bash
-Copiar
-Editar
+### 1. Gerar o arquivo com **datas formatadas** (`tweets_formated_data.csv`)
+
+
 javac TweetsDateFormatter.java
 java TweetsDateFormatter
-Resultado gerado: tweets_formated_data.csv
+# Resultado: tweets_formated_data.csv
 
-2. Gere o arquivo com pessoas mencionadas e contagem:
-Compile e execute a classe TweetsMentionExtractor.java para gerar o arquivo tweets_mentioned_persons.csv:
+### 2. Gerar o arquivo com **pessoas mencionadas e contagem** (`tweets_mentioned_persons.csv`)
 
-bash
-Copiar
-Editar
 javac TweetsMentionExtractor.java
 java TweetsMentionExtractor
-Resultado gerado: tweets_mentioned_persons.csv
+# Resultado: tweets_mentioned_persons.csv
 
-3. Realize a ordenação dos dados
-Após realizar as transformações anteriores, você pode começar a análise dos algoritmos de ordenação, utilizando o arquivo tweets_mentioned_persons.csv gerado. Os algoritmos de ordenação estudados no projeto devem ser aplicados a este arquivo, como descrito nas instruções do projeto. Aqui estão as etapas para gerar os arquivos de ordenação:
+### 3. Executar a **ordenação dos dados**
 
-Ordenar por data (campo date) em ordem crescente.
+Com os arquivos anteriores gerados, aplique os algoritmos de ordenação sobre o arquivo `tweets_mentioned_persons.csv`.
 
-Ordenar pelo número de pessoas mencionadas (campo mentioned_person_count) em ordem decrescente.
+> ✅ A execução principal do projeto é iniciada pelo arquivo `Main.java`.
 
-Ordenar pelo nome dos usuários (campo user) em ordem alfabética.
+#### 🔽 Tipos de ordenação:
 
-Para cada uma dessas ordenações, você deve usar todos os algoritmos recomendados (Selection Sort, Insertion Sort, Merge Sort, Quick Sort, QuickSort com Mediana de 3, Counting Sort, e HeapSort), gerando arquivos para cada algoritmo e caso (melhor, médio e pior).
+- Por **data** (`date`) – ordem **crescente**
+- Por **número de pessoas mencionadas** (`mentioned_person_count`) – ordem **decrescente**
+- Por **nome de usuário** (`user`) – ordem **alfabética**
 
-Por exemplo, ao ordenar por data com o algoritmo Insertion Sort, o arquivo gerado seria: tweets_mentioned_persons_date_insertionSort_medioCaso.csv.
+#### 📊 Algoritmos obrigatórios:
 
-📝 Resultado Esperado
-Após a execução do projeto, você deverá obter os seguintes arquivos:
+- Selection Sort  
+- Insertion Sort  
+- Merge Sort  
+- Quick Sort  
+- Quick Sort (com Mediana de 3)  
+- Counting Sort  
+- HeapSort  
 
-tweets_formated_data.csv (resultado da transformação das datas)
+Cada algoritmo deve ser executado nos três casos de análise:
 
-tweets_mentioned_persons.csv (resultado da extração de menções e contagem de usuários)
+- Melhor caso  
+- Caso médio  
+- Pior caso  
 
-Arquivos de ordenação gerados para cada algoritmo e caso, como por exemplo:
+#### 📁 Exemplos de nomes de arquivos gerados:
 
-tweets_mentioned_persons_date_insertionSort_medioCaso.csv
-
-tweets_mentioned_persons_count_insertionSort_medioCaso.csv
-
-tweets_mentioned_persons_user_insertionSort_medioCaso.csv
+- tweets_mentioned_persons_date_insertionSort_medioCaso.csv
+- tweets_mentioned_persons_count_quickSort_piorCaso.csv
+- tweets_mentioned_persons_user_mergeSort_melhorCaso.csv
