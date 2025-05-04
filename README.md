@@ -6,9 +6,8 @@ Este projeto em Java foi desenvolvido como parte da disciplina de Laboratório d
 
 Certifique-se de ter os seguintes requisitos instalados e configurados em seu ambiente de desenvolvimento:
 
-- **Java:** Versão 17 ou superior é recomendada para garantir a compatibilidade com as funcionalidades utilizadas. Você pode baixar a versão mais recente em [https://www.oracle.com/java/technologies/downloads/](https://www.oracle.com/java/technologies/downloads/).
+- **Java:** Versão 17 ou superior
 - **Arquivo `tweets.csv`:** Este arquivo é essencial para a execução do projeto e deve ser fornecido pelo professor.
-    - **Importante:** Coloque o arquivo `tweets.csv` diretamente na raiz do diretório do seu projeto.
 
 ## 🚀 Como executar
 
@@ -53,7 +52,7 @@ A partir do arquivo `tweets_mentioned_persons.csv`, o programa principal (`Main.
 
 #### 🔧 Requisitos para a Parte de Ordenação
 
-Para executar a parte de ordenação, certifique-se de que os seguintes arquivos estejam presentes na raiz do seu projeto:
+Para executar a parte de ordenação, crie uma pasta chamada `data` e certifique-se de que os seguintes arquivos estejam presentes nessa pasta do seu projeto:
 
 -   `tweets.csv`
 -   `tweets_formated_data.csv`
@@ -78,6 +77,8 @@ Para facilitar o download, todos os arquivos necessários (`tweets.csv`, `tweets
     A execução deste comando iniciará o fluxo completo do programa, aplicando os algoritmos de ordenação e gerando os arquivos de saída.
 
 #### 📝 Arquivos de saída gerados pela ordenação
+
+Crie a pasta `outputs` para receber todos os arquivos de saída.
 
 Os arquivos de saída gerados dependerão dos critérios de ordenação aplicados e dos algoritmos utilizados. Abaixo estão os exemplos de arquivos que serão criados:
 
